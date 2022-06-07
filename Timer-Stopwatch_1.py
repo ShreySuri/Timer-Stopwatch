@@ -23,10 +23,18 @@ if task == "timer":
             print("Reload the program and enter a time. ")
         else:
             clock = int(clock)
-    
-    while clock != -1:
+
+
+    while clock > 0:
         seconds = clock % 100
         minutes = int((clock - seconds)/ 100)
-        print("%s:%s" % (minutes, seconds))
-        clock = clock - 1
+        if seconds > 9:
+            print("%s:%s" % (minutes, seconds))
+        else:
+            print("%s:0%s" % (minutes, seconds))
+        if seconds == 0:
+            clock = clock - 41
+        else:
+            clock = clock - 1
         time.sleep(1)
+    print("Time's Up!")
