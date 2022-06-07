@@ -38,3 +38,11 @@ if task == "timer":
             clock = clock - 1
         time.sleep(1)
     print("Time's Up!")
+
+else:
+
+
+    second = 1
+    minute = 0
+    if second < 10:
+        
