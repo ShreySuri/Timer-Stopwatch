@@ -9,11 +9,11 @@ while task != "timer" and task != "stopwatch":
     
 if task == "timer":
 
-    time = 0.5
-    while time % 1 != 0:
+    clock = 0.5
+    while clock % 1 != 0:
         print("")
-        time = input(print("Type the time as an integer, disregarding the colon. If you are confused about the format, type 'example'. "))
-        if time == "example":
+        clock = input(print("Type the time as an integer, disregarding the colon. If you are confused about the format, type 'example'. "))
+        if clock == "example":
             print("0:32 --> 32")
             print("1:28 --> 128")
             print("2:56 --> 256")
@@ -22,6 +22,11 @@ if task == "timer":
             print("")
             print("Reload the program and enter a time. ")
         else:
-            time = int(time)
+            clock = int(clock)
     
-    while c
+    while clock != -1:
+        seconds = clock % 100
+        minutes = int((clock - seconds)/ 100)
+        print("%s:%s" % (minutes, seconds))
+        clock = clock - 1
+        time.sleep(1)
