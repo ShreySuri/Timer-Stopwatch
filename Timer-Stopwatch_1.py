@@ -30,7 +30,12 @@ if task == "timer":
         print("1/100 second --> 0.01")
         print("1/10 second --> 0.1")
         print("1 second --> 1")
-    
+        print("Please reload the application and try again.")
+    else:
+        interval = float(interval)
+        interval = 100 * interval
+        interval = int(interval)
+        interval = interval / 100
         
     while clock > 0:
         seconds = clock % 100
@@ -40,16 +45,9 @@ if task == "timer":
         else:
             print("%s:0%s" % (minutes, seconds))
         if seconds == 0:
-            clock = clock - 41
+            clock = clock - 40 - interval
         else:
-            clock = clock - 1
-        time.sleep(1)
+            clock = clock - interval
+        time.sleep(interval)
     print("Time's Up!")
 
-else:
-
-
-    second = 1
-    minute = 0
-    if second < 10:
-        
