@@ -39,6 +39,9 @@ if task == "timer":
         
     while clock > 0:
         seconds = clock % 100
+        seconds = 100 * seconds
+        seconds = int(seconds)
+        seconds = seconds / 100
         minutes = int((clock - seconds)/ 100)
         if seconds > 9:
             print("%s:%s" % (minutes, seconds))
