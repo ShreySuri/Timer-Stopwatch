@@ -36,8 +36,10 @@ if task == "timer":
         interval = 100 * interval
         interval = int(interval)
         interval = interval / 100
-        
-    while clock > 0:
+
+    end = False
+    
+    while clock > 0 and end == False:
         seconds = clock % 100
         seconds = 100 * seconds
         seconds = int(seconds)
@@ -51,6 +53,11 @@ if task == "timer":
             clock = clock - 40 - interval
         else:
             clock = clock - interval
-        time.sleep(interval)
+        if interval > clock:
+            time.sleep(clock)
+            end = True
+        else:
+            time.sleep(interval)
+            
     print("Time's Up!")
 
