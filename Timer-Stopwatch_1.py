@@ -25,6 +25,13 @@ if task == "timer":
             clock = int(clock)
 
 
+    interval = input(print("Enter an interval. If you are confused as to what this means, type 'example' ."))
+    if interval == "example":
+        print("1/100 second --> 0.01")
+        print("1/10 second --> 0.1")
+        print("1 second --> 1")
+    
+        
     while clock > 0:
         seconds = clock % 100
         minutes = int((clock - seconds)/ 100)
