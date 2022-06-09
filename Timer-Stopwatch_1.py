@@ -1,5 +1,13 @@
 import time
 
+def time_to_sec(x):
+    a = sec % 100
+    b = int((x - a)/100)
+    sec = 60 * b + a
+    return(sec)
+
+
+
 task = None
 while task != "timer" and task != "stopwatch":
     print("")
@@ -9,10 +17,15 @@ while task != "timer" and task != "stopwatch":
     
 if task == "timer":
 
-    print("")
-    base = input(print("Enter which base you would like your timer in (2 - 9). If you would like a regular timer, type 'regular'. "))
 
-    if base == "regular":
+    base = 0.5
+    while base < 1 or base > 9 or base % 1 != 0:
+        print("")
+        base = input(print("Enter which base you would like your timer in (2 - 9). If you would like a regular timer, type '1'. "))
+        base = float(base)
+    base = int(base)
+
+    if base == 1:
         clock = 0.5
         while clock % 1 != 0:
             print("")
@@ -59,5 +72,21 @@ if task == "timer":
                 clock = clock - interval
             time.sleep(interval)
         print("Time's Up!")
+
+    else:
+        clock = 0.5
+        while clock % 1 != 0:
+            print("")
+            clock = input(print("Type the time as an integer, disregarding the colon. If you are confused about the format, type 'example'. "))
+            if clock == "example":
+                print("0:32 --> 32")
+                print("1:28 --> 128")
+                print("2:56 --> 256")
+                print("5:12 --> 512")
+                print("10:24 --> 1024")
+                print("")
+                print("Reload the program and enter a time. ")
+            else:
+                clock = int(clock)
     
 
