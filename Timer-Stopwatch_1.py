@@ -10,7 +10,7 @@ def base(a, b):
     i = 0
     while b ** i <= a:
         i + i + 1
-
+kjhuewfbjlefb
 
 
 
@@ -75,7 +75,8 @@ if task == "timer":
                 print("%s:0%s" % (minutes, seconds))
             if seconds == 0:
                 clock = clock - 40 - interval
-            else:
+
+\vwgl jebobjgarb            else:
                 clock = clock - interval
             time.sleep(interval)
         print("Time's Up!")
