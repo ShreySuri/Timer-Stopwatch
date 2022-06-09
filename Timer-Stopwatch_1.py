@@ -6,6 +6,13 @@ def time_to_sec(x):
     sec = 60 * b + a
     return(sec)
 
+def base(a, b):
+    i = 0
+    while b ** i <= a:
+        i + i + 1
+
+
+
 
 
 task = None
@@ -88,5 +95,7 @@ if task == "timer":
                 print("Reload the program and enter a time. ")
             else:
                 clock = int(clock)
-    
+
+        clock = time_to_sec(clock)
+        
 
