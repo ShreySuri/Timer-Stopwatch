@@ -142,3 +142,7 @@ else:
         if seconds == 60:
             minutes = minutes + 1
             seconds = 0
+        else:
+            seconds = seconds + 0
+
+        time.sleep(1)
