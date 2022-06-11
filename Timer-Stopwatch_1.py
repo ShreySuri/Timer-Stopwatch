@@ -125,3 +125,11 @@ if task == "timer":
             time.sleep(1)
         print("Time's Up!")
 
+else:
+
+    condition = True
+    seconds = 1
+    minutes = 0
+
+    while condition == True:
+        if seconds < 
