@@ -132,4 +132,7 @@ else:
     minutes = 0
 
     while condition == True:
-        if seconds < 
+        if seconds < 10:
+            print("%s:0%s" % (minutes, seconds))
+        else:
+            print("%s:%s" % (minutes, seconds))
