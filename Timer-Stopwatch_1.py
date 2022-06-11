@@ -136,3 +136,9 @@ else:
             print("%s:0%s" % (minutes, seconds))
         else:
             print("%s:%s" % (minutes, seconds))
+
+        seconds = seconds + 1
+
+        if seconds == 60:
+            minutes = minutes + 1
+            seconds = 0
