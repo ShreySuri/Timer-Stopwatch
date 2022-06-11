@@ -12,6 +12,7 @@ def base_of_first_num(a, b):
     place_val = 0
     counter = 0
     num = 0
+    
     while a ** place_val <= b:
         place_val + place_val + 1
     place_val = place_val - 1
@@ -117,9 +118,10 @@ if task == "timer":
                 clock = int(clock)
 
         clock = time_to_sec(clock)
-        print(clock)
         while clock > 0:
-            print(base_of_first_num(base, clock))
+            number = bin(clock)
+            print(number)
             clock = clock - 1
+            time.sleep(1)
         print("Time's Up!")
 
