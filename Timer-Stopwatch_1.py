@@ -7,10 +7,20 @@ def time_to_sec(x):
     return(sec)
 
 def base(a, b):
+    expand_list = []
     i = 0
-    while b ** i <= a:
+    counter = 0
+    while a ** i <= b:
         i + i + 1
-kjhuewfbjlefb
+    while b != 0:
+        if b >= a ** i
+            b = b - a ** i
+            counter = counter + 1
+        else:
+            i = i - 1
+            expand_list.append(counter)
+    expand_list.reverse()
+    
 
 
 
