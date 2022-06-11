@@ -8,20 +8,26 @@ def time_to_sec(x):
 
 def base(a, b):
     expand_list = []
-    i = 0
+    list_count = 0
+    place_val = 0
     counter = 0
-    while a ** i <= b:
-        i + i + 1
+    num = 0
+    while a ** place_val <= b:
+        place_val + place_val + 1
     while b != 0:
-        if b >= a ** i
-            b = b - a ** i
+        if b >= a ** place_val
+            b = b - a ** place_val
             counter = counter + 1
         else:
-            i = i - 1
+            place_val = place_val - 1
             expand_list.append(counter)
-    expand_list.reverse()
-    
+            list_count = list_count + 1
 
+    expand_list.reverse()
+    for i in range (0, list_count):
+        num = num + expand_list[i] ** i
+
+    return(num)
 
 
 
