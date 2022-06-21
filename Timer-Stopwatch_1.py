@@ -120,14 +120,12 @@ if task == "timer":
                 clock = int(clock)
 
         clock = time_to_sec(clock)
-
-       
+        
         while clock > 0:
-
-            print(base_of_first_num(base, clock))
+            value = base_of_first_num(base, clock)
+            print("base %s -- %s" % (base, value))
             clock = clock - 1
             time.sleep(1)
-            
         print("Time's Up!")
 
 else:
