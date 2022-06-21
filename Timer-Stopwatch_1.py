@@ -6,33 +6,30 @@ def time_to_sec(x):
     sec = 60 * b + a
     return(sec)
 
-def base_of_first_num(a, b):
-    expand_list = []
-    list_count = 0
+def base_of_first_num(base, num_orginal):
+   
+    parts_list = []
+    append_count = 0
+    new_num = 0
+
+while num_original != 0:
     place_val = 0
-    counter = 0
-    num = 0
-    
-    while a ** place_val <= b:
+    while base ** place_val <= num_original:
         place_val = place_val + 1
-        
     place_val = place_val - 1
-    
-    while b != 0:
-        if b >= a ** place_val:
-            b = b - a ** place_val
-            counter = counter + 1
-        else:
-            place_val = place_val - 1
-            expand_list.append(counter)
-            counter = 0
-            list_count = list_count + 1
 
-    expand_list.reverse()
-    for i in range (0, list_count):
-        num = num + expand_list[i] * (10 ** i)
+    part = base ** place_val
+    parts_list.append(part)
+    append_count = append_count + 1
+    num_original = num_original - part
 
-    return(num)
+for i in range (0, append_count):
+    log_num = parts_list[i]
+    log_val = math.log(log_num, base)
+    new_num = new_num + 10 ** log_val
+
+print(int(new_num))
+
 
 
 
