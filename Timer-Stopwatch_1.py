@@ -6,10 +6,14 @@ def time_to_sec(x):
     sec = 60 * b + a
     return(sec)
 
-def base_of_first_num(base, num_orginal):
+def base_of_first_num(base, clock):
+
+    import math
+
     parts_list = []
     append_count = 0
     new_num = 0
+    num_original = clock
 
     while num_original != 0:
         place_val = 0
@@ -122,7 +126,7 @@ if task == "timer":
 
             print(base_of_first_num(base, clock))
             clock = clock - 1
-
+            time.sleep(1)
             
         print("Time's Up!")
 
