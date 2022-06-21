@@ -7,28 +7,28 @@ def time_to_sec(x):
     return(sec)
 
 def base_of_first_num(base, num_orginal):
-   
     parts_list = []
     append_count = 0
     new_num = 0
 
-while num_original != 0:
-    place_val = 0
-    while base ** place_val <= num_original:
-        place_val = place_val + 1
-    place_val = place_val - 1
+    while num_original != 0:
+        place_val = 0
+        while base ** place_val <= num_original:
+            place_val = place_val + 1
+        place_val = place_val - 1
 
-    part = base ** place_val
-    parts_list.append(part)
-    append_count = append_count + 1
-    num_original = num_original - part
+        part = base ** place_val
+        parts_list.append(part)
+        append_count = append_count + 1
+        num_original = num_original - part
 
-for i in range (0, append_count):
-    log_num = parts_list[i]
-    log_val = math.log(log_num, base)
-    new_num = new_num + 10 ** log_val
-
-print(int(new_num))
+    for i in range (0, append_count):
+        log_num = parts_list[i]
+        log_val = math.log(log_num, base)
+        new_num = new_num + 10 ** log_val
+        new_num = int(new_num)
+        
+    return(new_num)
 
 
 
